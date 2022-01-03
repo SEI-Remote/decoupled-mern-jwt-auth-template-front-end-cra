@@ -2,7 +2,7 @@
 
 This is the front end of a decoupled MERN Stack app that includes JWT Authentication.
 
-When combined with the back end found [here](https://github.com/SEI-Remote-WC/jwt-auth-mern-template-back-end), you'll have all you need to build a full stack MERN app!
+When combined with the back end found [here](https://github.com/SEI-Remote/decoupled-mern-jwt-auth-template-back-end), you'll have all you need to build a full stack MERN app!
 
 Use this to go build things! 🚀
 
@@ -11,7 +11,7 @@ Use this to go build things! 🚀
 **Replace `<name-of-your-app-here>` in the commands below with the name of your app!**
 
 ```bash
-git clone https://github.com/SEI-Remote-WC/jwt-auth-mern-template-front-end <name-of-your-app-here>-front-end
+git clone https://github.com/SEI-Remote/decoupled-mern-jwt-auth-template-front-end <name-of-your-app-here>-front-end
 cd <name-of-your-app-here>-front-end
 ```
 
