@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Decoupled MERN Stack with JWT Auth Template - Front End
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the front end of a decoupled MERN Stack app that includes JWT Authentication.
 
-## Available Scripts
+When combined with the back end found [here](https://github.com/SEI-Remote-WC/jwt-auth-mern-template-back-end), you'll have all you need to build a full stack MERN app!
 
-In the project directory, you can run:
+Use this to go build things! 🚀
 
-### `npm start`
+## To Use This Template
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Replace `<name-of-your-app-here>` in the commands below with the name of your app!**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+git clone https://github.com/SEI-Remote-WC/jwt-auth-mern-template-front-end <name-of-your-app-here>-front-end
+cd <name-of-your-app-here>-front-end
+```
 
-### `npm test`
+Once you are in the project directory:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+rm -rf .git
+```
 
-### `npm run build`
+Here's what your command line output should like after this step (note that the indicator that we are in a git repository is gone!)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<img src="https://i.imgur.com/L47kNOZ.png" alt="The command line before and after running the rm -rf .git command. Before git:(main) is visible indiating that the directory contains a git repository, after the command it is not.">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Re-initialize a git repository:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git init
+```
 
-### `npm run eject`
+Use the GitHub CLI to create a new project repository on GitHub:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+gh repo create <name-of-your-app-here>-front-end
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Run `npm i` to fetch the template's dependencies:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm i
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+touch a `.env` file:
 
-## Learn More
+```bash
+touch .env
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Fill it with the following:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+REACT_APP_BACKEND_SERVER_URL=http://localhost:3001
+```
 
-### Code Splitting
+> 🚨 DO NOT place secrets in this `.env` file. The contents of this file WILL be exposed to site visitors.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Delete this README.md, then make an initial commit:
 
-### Analyzing the Bundle Size
+```bash
+git add .
+git commit -m "initial commit"
+git push -u origin main
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+You're done!
