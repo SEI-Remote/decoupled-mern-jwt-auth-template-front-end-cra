@@ -5,8 +5,11 @@ const Profiles = () => {
   const [profiles, setProfiles] = useState([])
 
   useEffect(()=> {
-    profileService.getAllProfiles()
-    .then(profiles => setProfiles(profiles))
+    const fetchProfiles = async () => {
+      const profileData = await profileService.getAllProfiles()
+      setProfiles(profileData)
+    }
+    fetchProfiles()
   }, [])
 
   return (
