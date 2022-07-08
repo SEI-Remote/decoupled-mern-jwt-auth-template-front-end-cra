@@ -5,7 +5,7 @@ async function signup(user) {
   try {
     const res = await fetch(`${BASE_URL}/signup`, {
       method: 'POST',
-      headers: new Headers({ 'Content-Type': 'application/json' }),
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(user),
     })
     const json = await res.json()
@@ -32,7 +32,7 @@ async function login(credentials) {
   try {
     const res = await fetch(`${BASE_URL}/login`, {
       method: 'POST',
-      headers: new Headers({ 'Content-Type': 'application/json' }),
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(credentials),
     })
     const json = await res.json()
@@ -51,10 +51,10 @@ async function changePassword(credentials) {
   try {
     const res = await fetch(`${BASE_URL}/changePassword`, {
       method: 'POST',
-      headers: new Headers({ 
+      headers: { 
         'Content-Type': 'application/json', 
-        Authorization: `Bearer ${tokenService.getToken()}` 
-      }),
+        'Authorization': `Bearer ${tokenService.getToken()}` 
+      },
       body: JSON.stringify(credentials),
     })
     const json = await res.json()
