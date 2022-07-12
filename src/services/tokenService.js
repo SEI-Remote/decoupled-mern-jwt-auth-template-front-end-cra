@@ -1,4 +1,4 @@
-import { Buffer } from 'buffer'
+import jwt_decode from 'jwt-decode'
 
 function setToken(token) {
   localStorage.setItem('token', token)
@@ -7,7 +7,7 @@ function setToken(token) {
 function getToken() {
   let token = localStorage.getItem('token')
   if (token) {
-    const payload = JSON.parse(Buffer.from(token.split('.')[1], 'base64'))
+    const payload = jwt_decode(token)
     if (payload.exp < Date.now() / 1000) {
       localStorage.removeItem('token')
       token = null
@@ -20,9 +20,7 @@ function getToken() {
 
 function getUserFromToken() {
   const token = getToken()
-  return token
-    ? JSON.parse(Buffer.from(token.split('.')[1], 'base64')).user
-    : null
+  return token ? jwt_decode(token).user : null
 }
 
 function removeToken() {

@@ -43,7 +43,9 @@ const ChangePasswordForm = props => {
       className={styles.container}
     >
       <div className={styles.inputContainer}>
-        <label htmlFor="password" className={styles.label}>Current Password</label>
+        <label htmlFor="password" className={styles.label}>
+          Current Password
+        </label>
         <input
           type="password"
           autoComplete="off"

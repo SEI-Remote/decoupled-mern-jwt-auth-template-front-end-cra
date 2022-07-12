@@ -31,10 +31,10 @@ Re-initialize a git repository:
 git init
 ```
 
-Use the GitHub CLI to create a new project repository on GitHub:
+Use the GitHub CLI to create a new public project repository on GitHub and add a remote named origin for this repo:
 
 ```bash
-gh repo create <name-of-your-app-here>-front-end
+gh repo create <name-of-your-app-here>-front-end --public --source=. --remote=origin
 ```
 
 Run `npm i` to fetch the template's dependencies:
@@ -52,10 +52,10 @@ touch .env
 Fill it with the following:
 
 ```
-REACT_APP_BACKEND_SERVER_URL=http://localhost:3001
+REACT_APP_BACK_END_SERVER_URL=http://localhost:3001
 ```
 
-> 🚨 DO NOT place secrets in this `.env` file. The contents of this file WILL be exposed to site visitors.
+> 🚨 DO NOT place secrets in this `.env` file. The contents of this file WILL be exposed to site visitors. We are only using the front-end .env to create variables specific to the environment the application is running in.
 
 Delete this README.md, then make an initial commit:
 
