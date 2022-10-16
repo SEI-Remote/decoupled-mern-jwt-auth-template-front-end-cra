@@ -1,12 +1,23 @@
+// npm modules
 import { useState } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
-import NavBar from './components/NavBar/NavBar'
+
+// page components
 import Signup from './pages/Signup/Signup'
 import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
+
+// components
+import NavBar from './components/NavBar/NavBar'
+import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
+
+// services
 import * as authService from './services/authService'
+
+// styles
+import './app.css'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
@@ -37,16 +48,18 @@ const App = () => {
         />
         <Route
           path="/profiles"
-          element={user ? <Profiles /> : <Navigate to="/login" />}
+          element={
+            <ProtectedRoute user={user}>
+              <Profiles />
+            </ProtectedRoute>
+          }
         />
         <Route
           path="/changePassword"
           element={
-            user ? (
+            <ProtectedRoute user={user}>
               <ChangePassword handleSignupOrLogin={handleSignupOrLogin} />
-            ) : (
-              <Navigate to="/login" />
-            )
+            </ProtectedRoute>
           }
         />
       </Routes>
