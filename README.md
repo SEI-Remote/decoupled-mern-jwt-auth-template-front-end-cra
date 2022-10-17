@@ -13,9 +13,10 @@ Use this to go build things! 🚀
 ```bash
 git clone https://github.com/SEI-Remote/decoupled-mern-jwt-auth-template-front-end <name-of-your-app-here>-front-end
 cd <name-of-your-app-here>-front-end
+code .
 ```
 
-Once you are in the project directory:
+With the project open in VS Code, open a terminal and run:
 
 ```bash
 rm -rf .git
