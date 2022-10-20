@@ -17,7 +17,7 @@ import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 import * as authService from './services/authService'
 
 // styles
-import './app.css'
+import './App.css'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
