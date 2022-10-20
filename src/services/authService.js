@@ -57,7 +57,7 @@ async function login(credentials) {
 
 async function changePassword(credentials) {
   try {
-    const res = await fetch(`${BASE_URL}/changePassword`, {
+    const res = await fetch(`${BASE_URL}/change-password`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
