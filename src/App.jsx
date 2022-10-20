@@ -55,7 +55,7 @@ const App = () => {
           }
         />
         <Route
-          path="/changePassword"
+          path="/change-password"
           element={
             <ProtectedRoute user={user}>
               <ChangePassword handleSignupOrLogin={handleSignupOrLogin} />
