@@ -1,3 +1,8 @@
+# _THIS TEMPLATE HAS BEEN DEPRECATED_
+
+This template utilizes `create-react-app` which we have moved away from.
+A more recent version of this template can be found here: https://github.com/SEI-Remote/decoupled-mern-jwt-auth-template-front-end.
+
 # Decoupled MERN Stack with JWT Auth Template - Front End
 
 This is the front end of a decoupled MERN Stack app that includes JWT Authentication.
